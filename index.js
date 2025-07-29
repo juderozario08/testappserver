@@ -16,6 +16,11 @@ app.get('/', (req, res) => {
     res.send('Hello world');
 });
 
+app.get('/instagram', (req, res) => {
+    res.send('this is the instagram way');
+});
+
+
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 });
