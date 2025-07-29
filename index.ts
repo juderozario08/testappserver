@@ -6,6 +6,7 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 const app = express();
+const PORT = process.env.PORT || 3000;
 
 app.use(cors());
 app.use(bodyParser.json());
@@ -20,6 +21,6 @@ app.get('/', (req, res) => {
     res.send("This is the working!!!");
 })
 
-app.listen(process.env.PORT, () => {
-    console.log('listening on port 3000');
+app.listen(PORT, () => {
+    console.log(`listening on port ${PORT}`);
 })
